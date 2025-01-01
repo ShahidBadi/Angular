@@ -1,0 +1,15 @@
+<input type="text" (input)="print($event)">
+<h1>{{temp}}</h1>
+
+<button (click)="display()">click</button>
+<button (click)="inc()">increment</button>
+<button (click)="dec()">decrement</button>
+<h1>{{count}}</h1>
+<div class="div1">
+  badi
+</div>
+
+<h1>{{d | date :'hh:mm:ss a'}}</h1>
+<h1>{{d | date:'m/d/yy, h:mm a'}}</h1>
+<h1>{{d | date:'h:mm:ss a zzzz'}}</h1>
+<h1>{{d | date:'EEEE MMMM d, y, h:mm:ss a zzzz'}}</h1>

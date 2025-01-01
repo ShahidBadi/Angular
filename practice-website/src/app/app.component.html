@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-6">
+        <label for="">Enter First Name</label>
+        <input type="text" (input)="printfirst($event)"><br><br>
+        <label for="">Enter Last Name</label>
+        <input type="text" (input)="printlast($event)"><br><br>
+        <label for="">Enter Image Url:</label>
+        <input type="text" (input)="printimage($event)"><br>
+        <input type="range"(input)="imagesize($event)">
+    </div>
+    <div class="col-6">
+        <label for="">first name:{{firstname}}</label><br><br>
+        <label for="">last name:{{lastname}}</label><br><br>
+        <label for="">image:</label>
+        <img src="{{images}}" alt="" sizes="{{image}}">
+    </div>
+
+</div>

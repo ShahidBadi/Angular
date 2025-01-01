@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="snackgame.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="div1">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.BfL7ekshHkhOfY1BssW-wQHaIm&pid=Api&P=0&h=180" id="img"
+            onkeyup="keydown()">
+    </div>
+    <script>
+         var img = document.getElementById("img");
+        var positiontop=0;
+        var postionleft=0;
+        document.addEventListener("keydown", (event) => {
+            switch (event.code) {
+                case "ArrowUp":
+                    positiontop-=10;
+                    break;
+                case "ArrowDown":
+                    positiontop+=10
+                    break;
+                case "ArrowLeft":
+                    postionleft-=10;
+                    break;
+                case "ArrowRight":
+                    postionleft+=10;
+                    break;
+                default:
+                    return; // Ignore non-arrow keys
+            }
+            img.style.marginTop=positiontop+"px";
+            img.style.marginLeft=positionleft+"px";
+
+        });
+
+
+    </script>
+</body>
+
+</html>
