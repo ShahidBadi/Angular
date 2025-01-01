@@ -1,0 +1,12 @@
+<input type="text" [(ngModel)]="value" style="margin-top: 10px;">
+<button (click)="insert()" style="margin-left: 10px;">{{button}}</button>
+
+<br><br>
+<table class="border border-primary">
+  <tr *ngFor="let temp of arr;let i=index">
+      <td>{{i}}</td>
+      <td>{{temp}}</td>
+      <td><button (click)="delete(i)">Delete</button></td>
+      <td><button (click)="update(i)">Edit</button></td>
+  </tr>
+</table>
