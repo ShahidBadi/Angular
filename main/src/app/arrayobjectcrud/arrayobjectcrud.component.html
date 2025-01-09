@@ -1,0 +1,14 @@
+<input type="text" [(ngModel)]="obj.fname" placeholder="Enter First Name"><br><br>
+<input type="text" [(ngModel)]="obj.lname" placeholder="Enter last Name"><br><br>
+<input type="text" [(ngModel)]="obj.department" placeholder="Enter department Name"><br><br>
+<button (click)="insert()">{{isedit==-1? "add":"Edit"}}</button>
+<table border="1">
+  <tr *ngFor="let temp of arr;let i=index">
+    <td>{{i+1}}</td>
+    <td>{{temp.fname}}</td>
+    <td>{{temp.lname}}</td>
+    <td>{{temp.department}}</td>
+    <button (click)="deletedata(i)">Delete</button>
+    <button (click)="updatedata(i)">Edit</button>
+</tr>
+</table>
