@@ -1,0 +1,13 @@
+
+<button (click)="change()">Toggle</button>
+<h1 *ngIf="name else elseblock">shahid</h1>
+
+
+<ng-template #elseblock>
+    <h1>badi</h1>
+</ng-template>
+<button (click)="start()">start</button>
+<button (click)="stop()">stop</button>
+<div [ngStyle]="mul">
+
+</div>
