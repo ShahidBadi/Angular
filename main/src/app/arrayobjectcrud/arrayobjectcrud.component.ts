@@ -42,14 +42,18 @@ export class ArrayobjectcrudComponent {
       this.obj.department = ""
       return;
     }
-    this.arr[this.isedit].fname = this.obj.fname;
-    this.arr[this.isedit].lname = this.obj.lname;
-    this.arr[this.isedit].department = this.obj.department;
-    this.isedit=-1;
-    this.obj.fname = ""
-    this.obj.lname = ""
-    this.obj.department = ""
-
+    else{
+      let bool=confirm("you want to update value")
+      if(bool){
+      this.arr[this.isedit].fname = this.obj.fname;
+      this.arr[this.isedit].lname = this.obj.lname;
+      this.arr[this.isedit].department = this.obj.department;
+      this.isedit=-1;
+      this.obj.fname = ""
+      this.obj.lname = ""
+      this.obj.department = ""
+    }
+    }
   }
   deletedata(index: number) {
     this.arr.splice(index, 1)
