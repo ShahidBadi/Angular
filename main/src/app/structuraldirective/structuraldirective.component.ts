@@ -42,4 +42,9 @@ export class StructuraldirectiveComponent {
   dayp(){
   this.day=this.day2.toLowerCase()
   }
+
+  h:any={
+    'first':true,
+    'second':true
+  }
 }

@@ -26,8 +26,7 @@
     <h1 *ngSwitchCase="'sunday'">Sunday</h1>
     <h1 *ngSwitchDefault>day no recongnize</h1>
 </div>
-<div [ngClass]="'first second'">
-    hello
-</div>
-
+<h1 [ngClass]="h">hello</h1>
+<h1 [ngClass]="['first','second']">hello 2</h1>
+<h1 [ngClass]="'first second'">hello 3</h1>
 
