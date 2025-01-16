@@ -2,21 +2,29 @@
     <table class="Main">
         <tr>
             <td>Name:</td>
-            <td><input type="text"></td>
+            <td><input type="text" [(ngModel)]="name"></td>
         </tr>
         <tr>
             <td>Enrollment:</td>
-            <td><input type="text"></td>
+            <td><input type="text" [(ngModel)]="enroll"></td>
         </tr>
         <tr>
             <td>City:</td>
-            <td><input type="text"></td>
+            <td><input type="text" [(ngModel)]="city"></td>
         </tr>
     </table>
     <br>
 <table>
     <tr>
         <td>Name:</td>
-        <!-- <td>{{}}</td> -->
+        <td>{{name}}</td>
+    </tr><br>
+    <tr>
+        <td>Enrollment:</td>
+        <td>{{enroll}}</td>
+    </tr><br>
+    <tr>
+        <td>City:</td>
+        <td>{{city}}</td>
     </tr>
 </table>

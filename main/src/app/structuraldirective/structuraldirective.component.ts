@@ -1,9 +1,10 @@
-import { NgIf, NgStyle } from '@angular/common';
+import { NgClass, NgIf, NgStyle, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-structuraldirective',
-  imports: [NgStyle, NgIf],
+  imports: [NgStyle,NgIf,FormsModule,NgSwitch,NgSwitchCase,NgSwitchDefault,NgClass],
   templateUrl: './structuraldirective.component.html',
   styleUrl: './structuraldirective.component.css'
 })
@@ -35,5 +36,10 @@ export class StructuraldirectiveComponent {
       clearInterval(this.inter)
     }
    
+  }
+  day:any=""
+  day2:any=""
+  dayp(){
+  this.day=this.day2.toLowerCase()
   }
 }

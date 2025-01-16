@@ -6,8 +6,28 @@
 <ng-template #elseblock>
     <h1>badi</h1>
 </ng-template>
+
+
 <button (click)="start()">start</button>
 <button (click)="stop()">stop</button>
 <div [ngStyle]="mul">
 
 </div>
+<br><br>
+<input type="text" [(ngModel)]="day2" (input)="dayp()"><br><br>
+<!-- <button (click)="dayp()">day</button> -->
+<div [ngSwitch]="day">
+    <h1 *ngSwitchCase="'monday'">Monday</h1>
+    <h1 *ngSwitchCase="'tuesday'">Tuesday</h1>
+    <h1 *ngSwitchCase="'wednesday'">Wednesday</h1>
+    <h1 *ngSwitchCase="'thursday'">Thursday</h1>
+    <h1 *ngSwitchCase="'friday'">Friday</h1>
+    <h1 *ngSwitchCase="'saturday'">Saturday</h1>
+    <h1 *ngSwitchCase="'sunday'">Sunday</h1>
+    <h1 *ngSwitchDefault>day no recongnize</h1>
+</div>
+<div [ngClass]="'first second'">
+    hello
+</div>
+
+
