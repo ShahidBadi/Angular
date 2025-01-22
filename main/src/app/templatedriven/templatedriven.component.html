@@ -1,0 +1,22 @@
+<form #form="ngForm">
+        <input type="text" placeholder="Enter User name" 
+        name="user" [(ngModel)]="user.username" #username="ngModel" required>
+        <span *ngIf="username.invalid && username.touched" [ngStyle]="{'color':'red'}">Enter valid Username</span>
+            <br>
+            <br>
+        <input type="text" placeholder="Enter Email" 
+        name="email" [(ngModel)]="user.email" #email="ngModel"pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+        <span *ngIf="email.invalid && email.touched" [ngStyle]="{'color':'red'}">Invalid email</span> 
+     <br><br>
+        <input type="text" placeholder="Enter Contact" 
+        name="contact" [(ngModel)]="user.contact" #contact="ngModel" pattern="[0-9]{10}" required>
+        <span *ngIf="contact.invalid && contact.touched" [ngStyle]="{'color':'red'}">Invalid Contact</span>
+<br><br>
+        <input type="number" placeholder="Spi" 
+        name="spi" [(ngModel)]="user.spi" #spi="ngModel" min="0" max="10" required>
+        <span *ngIf="spi.invalid && spi.touched" [ngStyle]="{'color':'red'}">Invalid Spi</span>
+
+        <br><br>
+
+        <button [disabled]="form.invalid">submit</button>
+</form>

@@ -1,5 +1,75 @@
 
-    <table class="Main">
+<input type="text" [(ngModel)]="fname" placeholder="FirstName">
+<input type="text" [(ngModel)]="mname" placeholder="MiddleName">
+<input type="text" [(ngModel)]="lname" placeholder="LastName">
+<input type="date" [(ngModel)]="dob">
+<input type="email" [(ngModel)]="email" placeholder="Email Address">
+<input type="text" [(ngModel)]="qualification" placeholder="Enter Your Qualification Till Now">
+<input type="number" [(ngModel)]="Phone" placeholder="Enter the Number">
+<input type="text" [(ngModel)]="address" placeholder="Address">
+<input type="text" [(ngModel)]="strength" placeholder="Enter Your Strength">
+<input type="text" [(ngModel)]="weakness" placeholder="Enter Your Weakness">
+<input type="text" [(ngModel)]="skills" placeholder="Enter Your Skills">
+<input type="text" [(ngModel)]="certifications" placeholder="Enter Certifications">
+<input type="text" [(ngModel)]="achievements" placeholder="Enter Achievements">
+<input type="text" [(ngModel)]="photoUrl" placeholder="Enter the Path of the Photo">
+<br>
+<label>Experience</label>
+<select [(ngModel)]="Uni">
+<option>Fresher</option>
+<option>1-2 year</option>
+<option>2+ year</option>
+<option>5+ Year</option>
+<option>10+ Year</option>
+</select>
+<div class="resume-container">
+    <div class="header">
+        <div class="profile-photo">
+            <img src="{{photoUrl}}" alt="Profile Photo">
+        </div>
+        <h1>{{fname}} {{mname}} {{lname}}</h1>
+        <p>{{dob}}| {{email}} | {{Phone}} | {{address}}</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Professional Summary</div>
+        <p>{{strength}} | {{weakness}}</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Experience</div>
+        <p>{{Uni}}</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Education</div>
+        <p>{{qualification}}</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Skills</div>
+        <p>{{skills}}</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Certifications</div>
+        <p>{{certifications}}</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Achievements</div>
+        <p>{{achievements}}</p>
+    </div>
+
+    <button (click)="downloadPDF()">Download as PDF</button>
+</div>
+
+  
+  
+  
+  
+  
+  <!-- <table class="Main">
         <tr>
             <td>Name:</td>
             <td><input type="text" [(ngModel)]="name"></td>
@@ -27,4 +97,4 @@
         <td>City:</td>
         <td>{{city}}</td>
     </tr>
-</table>
+</table> -->
