@@ -1,0 +1,21 @@
+<form [formGroup]="userform">
+    <input type="text" placeholder="Enter user name" formControlName="username">
+   <span *ngIf="userform.get('username')?.errors?.['required'] && userform.get('username')?.touched" style="color: red;">Enter user name </span>
+   <span *ngIf="userform.get('username')?.errors?.['minlength']" style="color: red;">Enter valid username </span><br><br>
+
+
+    <input type="text" placeholder="Enter Email" formControlName="email">
+    <span *ngIf="userform.get('email')?.errors?.['required'] && userform.get('email')?.touched" style="color: red;">Enter Email</span>
+    <span *ngIf="userform.get('email')?.errors?.['email']" style="color: red;">Enter valid email </span><br><br>
+
+    <input type="text" placeholder="Enter contact" formControlName="contact">
+    <span *ngIf="userform.get('contact')?.errors?.['required'] && userform.get('contact')?.touched" style="color: red;">Enter contact number</span>
+    <span *ngIf="userform.get('contact')?.errors?.['minlength'] && userform.get('contact')?.errors?.['maxlength']" style="color: red;">Enter valid email </span><br><br>
+
+    <input type="text" placeholder="Enter password" formControlName="password">
+    <span *ngIf="userform.get('password')?.errors?.['required'] && userform.get('password')?.touched" style="color: red;">Enter password</span>
+    <span *ngIf="userform.get('contact')?.errors?.['minlength'] && userform.get('contact')?.errors?.['maxlength']" style="color: red;">Enter valid email </span><br><br>
+
+    <input type="text" placeholder="Enter spi" formControlName="spi">
+    <span *ngIf="userform.get('spi')?.invalid && userform.get('spi')?.touched" style="color: red;">Enter spi</span>
+</form>

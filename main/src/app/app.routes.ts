@@ -4,6 +4,7 @@ import { ArrayobjectcrudComponent } from './arrayobjectcrud/arrayobjectcrud.comp
 import { ResumeComponent } from './resume/resume.component';
 import { StructuraldirectiveComponent } from './structuraldirective/structuraldirective.component';
 import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
+import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
 
 
 export const routes: Routes = [
@@ -11,6 +12,6 @@ export const routes: Routes = [
     {path:'arrayobjectcrud',component:ArrayobjectcrudComponent},
     {path:'resume',component:ResumeComponent},
     {path:'structural',component:StructuraldirectiveComponent},
-    {path:'templatedriven',component:TemplatedrivenComponent}
-
+    {path:'templatedriven',component:TemplatedrivenComponent},
+    {path:'reactiveform',component:ReactiveformsComponent}
 ];

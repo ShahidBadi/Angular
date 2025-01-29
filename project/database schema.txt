@@ -1,0 +1,97 @@
+1) users:-
+
+userId: String,
+
+name: String
+
+email: String,
+
+password: string,
+
+phone: string,
+
+address: string,
+
+createdAt: string,
+
+updatedAt: string
+
+
+2) products:-
+
+productid: String,
+
+name: String
+
+description: String,
+
+price: string,
+
+category: string,
+
+stock: string,
+
+createdAt: string,
+
+updatedAt: string
+
+
+3)Categories:-
+
+
+categoryId: String,
+
+name: String
+
+description: String,
+
+
+4) Orders:-
+
+
+orderId: String,
+
+userId: String
+
+totalAmount: String,
+
+status: String,
+
+shippingAddress: String,
+
+createdAt: String,
+
+updatedAt: String
+
+
+5)cart:-
+
+cartId: String,
+
+userId: String
+
+products: String,
+
+
+6)Reviews:-
+
+reviewId: String,
+
+productid: String
+
+userId: String,
+
+rating: String,
+
+comment: String
+
+createdAt: String,
+
+
+7)Wishlist:-
+
+wishlistId: String,
+
+userId: String
+
+products: String,
