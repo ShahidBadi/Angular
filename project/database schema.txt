@@ -1,45 +1,34 @@
 1) users:-
 
-userId: String,
-
 name: String
 
-email: String,
+email: String, //unique:true
 
-password: string,
+password: string, min 8
 
-phone: string,
+phone: string, min 10 max 13
 
-address: string,
-
-createdAt: string,
-
-updatedAt: string
+address: {
+	street:String,
+	coun, state, pin
+},
+{timestamps:true},
 
 
 2) products:-
 
-productid: String,
-
 name: String
 
-description: String,
+description: String, max 500
 
-price: string,
+price: Number,
 
-category: string,
+category: id,
 
-stock: string,
-
-createdAt: string,
-
-updatedAt: string
+stock: number,
 
 
 3)Categories:-
-
-
-categoryId: String,
 
 name: String
 
@@ -48,50 +37,37 @@ description: String,
 
 4) Orders:-
 
+userId: id (24hex)
 
-orderId: String,
+totalAmount: number,
 
-userId: String
-
-totalAmount: String,
-
-status: String,
+status: enum["dil",'shiping',"proc","canc"],
 
 shippingAddress: String,
 
-createdAt: String,
-
-updatedAt: String
 
 
 5)cart:-
 
-cartId: String,
+userId: Id,
 
-userId: String
-
-products: String,
+products: [apple, banana],
 
 
 6)Reviews:-
-
-reviewId: String,
 
 productid: String
 
 userId: String,
 
-rating: String,
+rating: number, 1,5,
 
-comment: String
+comment: String, max 200
 
-createdAt: String,
 
 
 7)Wishlist:-
 
-wishlistId: String,
-
 userId: String
 
-products: String,
+products: [],

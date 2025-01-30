@@ -1,0 +1,33 @@
+<form [formGroup]="userform">
+    <input type="text" formControlName="username" placeholder="Enter username">
+    <span class="text-danger"  *ngIf="userform.get('username')?.errors?.['required'] && 
+    userform.get('username')?.touched">Enter user name</span>
+    <span class="text-danger" *ngIf="userform.get('username')?.errors?.['minlength']">Enter valid username </span><br><br>
+
+    <input type="text" formControlName="password" placeholder="Enter password">
+    <span class="text-danger"  *ngIf="userform.get('password')?.errors?.['required'] && 
+    userform.get('password')?.touched">Enter password</span>
+    <span  class="text-danger" *ngIf="userform.get('password')?.errors?.['minlength']" >Enter valid password </span><br><br>
+
+    <input type="text" formControlName="contact" placeholder="Enter contact">
+    <span class="text-danger"  *ngIf="userform.get('contact')?.errors?.['required'] && 
+    userform.get('contact')?.touched">Enter contact</span>
+    <span class="text-danger"  *ngIf="userform.get('contact')?.errors?.['minlength'] ||userform.get('contact')?.errors?.['maxlength']" >Enter valid contact </span><br><br>
+
+    <input type="text" formControlName="spi" placeholder="Enter spi">
+    <span class="text-danger"  *ngIf="userform.get('spi')?.errors?.['required'] && 
+    userform.get('spi')?.touched">Enter spi</span>
+    <span class="text-danger" *ngIf="userform.get('spi')?.errors?.['min'] ||  userform.get('spi')?.errors?.['max']">Enter valid spi </span><br><br>
+
+
+
+    <div *ngIf="userform.contains('email')">
+        <input type="text" placeholder="Enter Email" formControlName="email">
+        <span  class="text-danger" *ngIf="userform.get('email')?.errors?.['required']
+        && userform.get('email')?.touched">Enter Email</span>
+        <span class="text-danger" *ngIf="userform.get('email')?.errors?.['email']">Enter Valid Email</span>
+    </div>
+    <button (click)="addemail()">Add Control</button>
+    <button (click)="removeemail()">Remove Control</button>
+
+</form>
