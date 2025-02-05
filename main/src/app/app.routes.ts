@@ -6,6 +6,8 @@ import { StructuraldirectiveComponent } from './structuraldirective/structuraldi
 import { TemplatedrivenComponent } from './templatedriven/templatedriven.component';
 import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component';
 import { FormbuilderComponent } from './formbuilder/formbuilder.component';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
 
 
 export const routes: Routes = [
@@ -15,5 +17,7 @@ export const routes: Routes = [
     {path:'structural',component:StructuraldirectiveComponent},
     {path:'templatedriven',component:TemplatedrivenComponent},
     {path:'reactiveform',component:ReactiveformsComponent},
-    {path:'formbuilder',component:FormbuilderComponent}
+    {path:'formbuilder',component:FormbuilderComponent},
+    {path:'signup',component:SignupComponent},
+    {path:'login',component:LoginComponent}
 ];
