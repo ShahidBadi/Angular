@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { ApifacultyService } from '../apifaculty.service';
 import { NgFor } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-faculty',
-  imports: [NgFor],
+  imports: [NgFor,RouterLink],
   templateUrl: './faculty.component.html',
   styleUrl: './faculty.component.css'
 })

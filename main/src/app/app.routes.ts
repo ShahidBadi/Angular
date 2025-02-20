@@ -9,6 +9,7 @@ import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { FacultyComponent } from './faculty/faculty.component';
+import { DetailfacultyComponent } from './detailfaculty/detailfaculty.component';
 
 
 export const routes: Routes = [
@@ -21,5 +22,6 @@ export const routes: Routes = [
     {path:'formbuilder',component:FormbuilderComponent},
     {path:'signup',component:SignupComponent},
     {path:'login',component:LoginComponent},
-    {path:'faculty',component:FacultyComponent}
+    {path:'faculty',component:FacultyComponent},
+    {path:'faculty/:id',component:DetailfacultyComponent}
 ];
