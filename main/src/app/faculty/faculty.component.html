@@ -1,0 +1,18 @@
+ <ul *ngFor="let temp of faculty">
+    <li>{{temp.id}}</li>
+    <li>{{temp.name}}</li>
+    <li>{{temp.city}}</li>
+</ul> 
+
+<table border="2px">
+    <tr>
+        <td>id</td>
+        <td>name</td>
+        <td>city</td>
+    </tr>
+    <tr *ngFor="let temp of faculty">
+        <td>{{temp.id}}</td>
+        <td>{{temp.name}}</td>
+        <td>{{temp.city}}</td>
+    </tr>
+</table>

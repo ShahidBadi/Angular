@@ -8,6 +8,7 @@ import { ReactiveformsComponent } from './reactiveforms/reactiveforms.component'
 import { FormbuilderComponent } from './formbuilder/formbuilder.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { FacultyComponent } from './faculty/faculty.component';
 
 
 export const routes: Routes = [
@@ -19,5 +20,6 @@ export const routes: Routes = [
     {path:'reactiveform',component:ReactiveformsComponent},
     {path:'formbuilder',component:FormbuilderComponent},
     {path:'signup',component:SignupComponent},
-    {path:'login',component:LoginComponent}
+    {path:'login',component:LoginComponent},
+    {path:'faculty',component:FacultyComponent}
 ];
