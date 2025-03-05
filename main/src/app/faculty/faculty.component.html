@@ -6,7 +6,8 @@
       <h5 class="card-title">{{temp.name}}</h5>
       <h5 class="card-title">{{temp.city}}</h5>
       <h5 class="card-title">{{temp.createdAt}}</h5>
-      <a class="btn btn-primary" routerLink="{{temp.id}}">Go somewhere</a>
+      <a class="btn btn-primary" routerLink="{{temp.id}}">Detail</a>
+      <a class="btn btn-primary" (click)="deletefac(temp.id)">Delete</a>
     </div>
   </div>
 

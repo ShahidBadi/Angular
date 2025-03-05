@@ -5,18 +5,23 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-faculty',
-  imports: [NgFor,RouterLink],
+  imports: [NgFor, RouterLink],
   templateUrl: './faculty.component.html',
   styleUrl: './faculty.component.css'
 })
 export class FacultyComponent {
-    private _api=inject(ApifacultyService)
+  private _api = inject(ApifacultyService)
 
-    faculty:any=[]
-    ngOnInit(){
-      this._api.getAllfaculty().subscribe((data) => {
-        
-        this.faculty=data
-      })  
-      }
+  faculty: any = []
+  ngOnInit() {
+    this._api.getAllfaculty().subscribe((data) => {
+      this.faculty = data
+    })
+  }
+
+  deletefac(id: number) {
+    this._api.deletefac(id).subscribe((res: any)=>{
+      this.ngOnInit()
+    })
+  }
 }

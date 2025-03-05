@@ -13,4 +13,7 @@ export class ApifacultyService {
   getById(id:number){
     return this._http.get("https://67b583d807ba6e59083d19f6.mockapi.io"+"/faculty/"+id)
   }
+  deletefac(id:number){
+    return this._http.delete("https://67b583d807ba6e59083d19f6.mockapi.io"+"/faculty/"+id) 
+  }
 }
